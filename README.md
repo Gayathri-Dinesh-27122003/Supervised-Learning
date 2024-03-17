@@ -1,3 +1,5 @@
+#SIMPLE LINEAR PREGRESSION
+
 Simple linear regression is a statistical technique used to model the relationship between two continuous variables. It assumes this relationship can be represented by a straight line. Here's a breakdown of the key concepts:
 
 Components:
