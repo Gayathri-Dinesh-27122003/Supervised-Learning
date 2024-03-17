@@ -1,4 +1,4 @@
-# Decision Tree
+# Decision Tree Regression
 
 In decision tree regression, the core concept of decision trees – splitting data based on a series of questions – is applied to predict continuous target variables. Here's how it works:
 
