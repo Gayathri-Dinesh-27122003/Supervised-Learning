@@ -1,19 +1,45 @@
-# Supervised-Learning
+# Polynomial Linear Regression
 
-This repository is a comprehensive collection of various machine learning models implemented in Python. It encompasses both regression and classification algorithms, allowing you to explore and compare their effectiveness for different prediction tasks.
+While simple and multiple linear regression models excel at capturing linear relationships, real-world data often exhibits more complex, curved patterns. Polynomial linear regression comes to the rescue in these scenarios. It builds on the foundation of linear regression but introduces **non-linearity** by transforming the independent variables.
 
-What's Included:
+Core Idea:
 
-Regression Models:
+Instead of using the raw values of the independent variable (X), polynomial regression creates new features by raising X to different powers (X², X³, etc.). These new features are called polynomial terms.
+The model then fits a linear equation to these transformed features and the dependent variable (Y).
 
-Linear Regression: Implementations of simple, multiple, and polynomial linear regression to model continuous relationships between variables.
-Non-Linear Regression: Code for Support Vector Regression (SVR), Decision Tree Regression, and Random Forest Regression to handle non-linear relationships in regression problems.
+Equation:
 
-Classification Models:
+The general equation for a polynomial linear regression of degree n is:
 
-Logistic Regression: A powerful model for predicting binary class labels (yes/no or 0/1) based on a linear relationship with features.
-K-Nearest Neighbors (KNN): Classifies data points based on the majority vote of their k nearest neighbors in the feature space.
-Support Vector Machine (SVM): Creates a hyperplane that best separates data points of different classes, with extensions like Kernel SVM for non-linear classification.
-Naive Bayes: A probabilistic classifier that predicts class membership based on Bayes' theorem and assuming independence between features.
-Decision Tree: Learns a tree-like structure with decision rules at each node to classify data points into specific categories.
-Random Forest: An ensemble method combining multiple decision trees for improved classification accuracy and reduced overfitting.
+Y = b₀ + b₁X + b₂X² + ... + bnX^n
+
+b₀ (intercept):** Similar to simpler models, this represents the y-axis intercept.
+bᵢ (coefficients):** These coefficients determine the impact of each term (X, X², ..., X^n) on the dependent variable (Y).
+
+Choosing the Degree of the Polynomial:
+
+A higher degree polynomial allows for more complex curves but also increases the risk of overfitting. 
+It's crucial to find the right balance between capturing the underlying trend and avoiding overfitting to noise in the data. 
+
+Benefits:
+
+Flexibility: Polynomial regression can model a wider range of relationships compared to simple linear models.
+Interpretability: Even though the overall model might be non-linear, the coefficients (bᵢ) can still provide insights into the direction and strength of the relationships between the variables.
+
+Drawbacks:
+
+Overfitting:  With a high degree polynomial, the model might fit the training data perfectly but fail to generalize to unseen data. Techniques like cross-validation can help mitigate this.
+Multicollinearity: Introducing polynomial terms can sometimes lead to high correlations between features (multicollinearity), which can affect the stability of the model.
+Increased Complexity: As the degree of the polynomial increases, the model becomes more complex and computationally expensive.
+
+Applications:
+
+Polynomial regression finds applications in various fields:
+
+Science: Modeling growth patterns, decay rates, or physical relationships with non-linear components.
+Economics:  Forecasting economic trends like inflation or unemployment rates.
+Engineering:  Optimizing parameters in design processes or predicting system behavior.
+
+Conclusion:
+
+Polynomial linear regression is a powerful tool for modeling non-linear relationships using a familiar linear regression framework. However, it's essential to be aware of its limitations and choose the complexity (degree) of the polynomial carefully to avoid overfitting and achieve optimal results.
