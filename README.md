@@ -1,6 +1,6 @@
 # Polynomial Linear Regression
 
-While simple and multiple linear regression models excel at capturing linear relationships, real-world data often exhibits more complex, curved patterns. Polynomial linear regression comes to the rescue in these scenarios. It builds on the foundation of linear regression but introduces **non-linearity** by transforming the independent variables.
+While simple and multiple linear regression models excel at capturing linear relationships, real-world data often exhibits more complex, curved patterns. Polynomial linear regression comes to the rescue in these scenarios. It builds on the foundation of linear regression but introduces non-linearity by transforming the independent variables.
 
 Core Idea:
 
@@ -13,8 +13,8 @@ The general equation for a polynomial linear regression of degree n is:
 
 Y = b₀ + b₁X + b₂X² + ... + bnX^n
 
-b₀ (intercept):** Similar to simpler models, this represents the y-axis intercept.
-bᵢ (coefficients):** These coefficients determine the impact of each term (X, X², ..., X^n) on the dependent variable (Y).
+b₀ (intercept): Similar to simpler models, this represents the y-axis intercept.
+bᵢ (coefficients): These coefficients determine the impact of each term (X, X², ..., X^n) on the dependent variable (Y).
 
 Choosing the Degree of the Polynomial:
 
