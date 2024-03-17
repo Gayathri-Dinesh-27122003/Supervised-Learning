@@ -1,19 +1,27 @@
-# Supervised-Learning
+# Decision Tree
 
-This repository is a comprehensive collection of various machine learning models implemented in Python. It encompasses both regression and classification algorithms, allowing you to explore and compare their effectiveness for different prediction tasks.
+Function: Navigate data through a series of questions (decision rules) based on features to predict a class label (categorical outcome). 
+Structure: Resembles a flowchart with a root node (entire dataset), internal nodes (decision points based on features), branches (possible answers to questions), and leaf nodes (final predictions for a specific data subset).
+Learning Process:
+    Splits data at each node based on the feature that best separates the data points into distinct classes. 
+    Uses metrics like information gain (chooses the split that maximizes the difference between the "mixedness" of data before and after the split).
+    Stops growing the tree when a stopping criterion is met (e.g., reaching a certain depth, achieving sufficient purity in a leaf node).
 
-What's Included:
+Advantages:
 
-Regression Models:
+Interpretability: Easy to understand the logic behind predictions by following the sequence of questions in the tree.
+Can handle various data types: Works well with both categorical and continuous features.
+No need for feature scaling: Doesn't require explicit scaling of features to a specific range.
 
-Linear Regression: Implementations of simple, multiple, and polynomial linear regression to model continuous relationships between variables.
-Non-Linear Regression: Code for Support Vector Regression (SVR), Decision Tree Regression, and Random Forest Regression to handle non-linear relationships in regression problems.
+Disadvantages:
 
-Classification Models:
+Prone to overfitting: Deep trees can become overly complex and memorize the training data, leading to poor performance on unseen data (techniques like pruning help mitigate this).
+Sensitive to small changes in data: Minor variations in the training data can significantly impact the decision splits and potentially reduce accuracy.
 
-Logistic Regression: A powerful model for predicting binary class labels (yes/no or 0/1) based on a linear relationship with features.
-K-Nearest Neighbors (KNN): Classifies data points based on the majority vote of their k nearest neighbors in the feature space.
-Support Vector Machine (SVM): Creates a hyperplane that best separates data points of different classes, with extensions like Kernel SVM for non-linear classification.
-Naive Bayes: A probabilistic classifier that predicts class membership based on Bayes' theorem and assuming independence between features.
-Decision Tree: Learns a tree-like structure with decision rules at each node to classify data points into specific categories.
-Random Forest: An ensemble method combining multiple decision trees for improved classification accuracy and reduced overfitting.
+Applications:
+
+Loan approval prediction: Classifying loan applicants as high-risk or low-risk.
+Customer churn prediction: Identifying customers at risk of churning to develop targeted retention strategies.
+Fraud detection: Classifying transactions as fraudulent or legitimate.
+
+Overall, decision trees offer a valuable tool for classification tasks, especially when interpretability and handling various data types are important. However, be aware of their susceptibility to overfitting and consider techniques to improve theirgeneralizability.
